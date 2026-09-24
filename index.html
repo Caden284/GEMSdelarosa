@@ -585,7 +585,7 @@
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>100% smoke-free</li>
         </ul>
         <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:6px">
-          <a class="btn btn-gem" href="AIRBNB_LISTING_URL" id="airbnbBtn" target="_blank" rel="noopener">Book now on Airbnb
+          <a class="btn btn-gem" href="https://www.airbnb.com/rooms/1561900705779134761" id="airbnbBtn" target="_blank" rel="noopener">Book now on Airbnb
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
           </a>
           <a class="btn btn-line" href="https://w.app/gemsdelarosa" target="_blank" rel="noopener">Having trouble? WhatsApp us</a>
@@ -876,8 +876,8 @@
   hours.addEventListener('input', syncHours); type.addEventListener('change', syncHours); syncHours();
 
   const WA = '18687024236', EMAIL = 'gemsdelarosa1118@gmail.com';
-  // Paste the Airbnb listing URL here. Until then the button asks for the stay over WhatsApp.
-  const AIRBNB_URL = '';
+  // Airbnb listing. If this is ever emptied, the button asks for the stay over WhatsApp instead.
+  const AIRBNB_URL = 'https://www.airbnb.com/rooms/1561900705779134761';
   const ab = document.getElementById('airbnbBtn');
   if(AIRBNB_URL){ ab.href = AIRBNB_URL; }
   else { ab.href = 'https://wa.me/' + WA + '?text=' + encodeURIComponent("Hi G.E.M.S De La Rosa! I'd like to book the Airbnb stay. Could you send me the listing link and availability?"); ab.firstChild.textContent = 'Request the stay on WhatsApp'; }
