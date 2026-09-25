@@ -30,6 +30,7 @@ Pages load Vercel Web Analytics from `/_vercel/insights/script.js`. It only work
 - **Airbnb link:** `AIRBNB_URL` in `js/site.js`.
 - **Get directions:** the Google Maps links marked `data-directions` in `index.html` and `contact.html`. They search for the business by name; swap in the exact place link from Google Maps if you prefer.
 - **Page titles and search descriptions:** the `<title>` and `<meta name="description">` near the top of each page file.
+- **After editing `css/site.css` or `js/site.js`:** bump the `?v=` number on their links in every page file (search-and-replace `site.js?v=` / `site.css?v=`), so returning visitors get the new version straight away.
 - **Photos:** add new images to `img/` as `.webp` with a new file name. Images are cached for a week, so reusing an old name can show the old photo for a while.
 
 ## Run it locally
