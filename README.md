@@ -64,12 +64,12 @@ The live domain is `gemsdelarosa.com`. To change it, open the project's **Settin
 
 | Event | Duration | Price |
 |---|---|---|
-| Baby shower | 2–8 hrs | from $800 |
-| Birthdays | 2–8 hrs | from $800 |
-| Sip and paint | 2–8 hrs | from $800 |
-| Wedding venue | 8 hrs | $3,500 |
-| Other smaller events | 2–8 hrs | from $800 |
-| Other larger events | 2–8 hrs | from $800 |
+| Baby shower | 2–8 hrs | $800 TTD (about $120 USD) per 2 hrs |
+| Birthdays | 2–8 hrs | $800 TTD (about $120 USD) per 2 hrs |
+| Sip and paint | 2–8 hrs | $800 TTD (about $120 USD) per 2 hrs |
+| Wedding venue | 8 hrs | $3,500 TTD (about $525 USD) |
+| Other smaller events | 2–8 hrs | $800 TTD (about $120 USD) per 2 hrs |
+| Other larger events | 2–8 hrs | $800 TTD (about $120 USD) per 2 hrs |
 
 All bookings carry a refundable caution fee, returned within 48 hours of a clear post-event inspection.
 

@@ -4,12 +4,12 @@
 
   // ---------- Content: event packages and things to do ----------
   const PACKS = [
-    {name:'Baby Shower', dur:'2 hr – 8 hr', price:'$800', from:true, img:'ev-1', alt:'White favour bags and a blue “It’s a boy” sign on a party table', desc:'Garden light, a floral photo wall, and room for everyone who loves you.'},
-    {name:'Birthdays', dur:'2 hr – 8 hr', price:'$800', from:true, img:'ev-2', alt:'A man smiling while holding a red velvet cake at a birthday party', desc:'From a lime with close friends to a full family fete under the palms.'},
-    {name:'Sip and Paint', dur:'2 hr – 8 hr', price:'$800', from:true, img:'ev-3', alt:'Friends painting canvases with glasses of wine', desc:'Easels, drinks, and good company. Drop cloths provided; see policy.'},
-    {name:'Wedding Venue', dur:'8 hr', price:'$3,500', from:false, featured:true, img:'ev-4', alt:'A wedding ceremony under a draped marquee', desc:'The full day, stunning and beautifully maintained. Add the Airbnb for the night.'},
-    {name:'Other Smaller Events', dur:'2 hr – 8 hr', price:'$800', from:true, img:'ev-5', alt:'Guests mingling at a buffet reception', desc:'Engagements, photoshoots, reunions, and intimate gatherings.'},
-    {name:'Other Larger Events', dur:'2 hr – 8 hr', price:'$800', from:true, img:'ev-6', alt:'Volunteers serving food at a community event', desc:'Bigger crowds welcome. Tell us the numbers and we’ll plan the space.'}
+    {name:'Baby Shower', dur:'2 hr – 8 hr', price:'$800', usd:'$120', label:'Per 2 hours', img:'ev-1', alt:'White favour bags and a blue “It’s a boy” sign on a party table', desc:'Garden light, a floral photo wall, and room for everyone who loves you.'},
+    {name:'Birthdays', dur:'2 hr – 8 hr', price:'$800', usd:'$120', label:'Per 2 hours', img:'ev-2', alt:'A man smiling while holding a red velvet cake at a birthday party', desc:'From a lime with close friends to a full family fete under the palms.'},
+    {name:'Sip and Paint', dur:'2 hr – 8 hr', price:'$800', usd:'$120', label:'Per 2 hours', img:'ev-3', alt:'Friends painting canvases with glasses of wine', desc:'Easels, drinks, and good company. Drop cloths provided; see policy.'},
+    {name:'Wedding Venue', dur:'8 hr', price:'$3,500', usd:'$525', label:'Fixed · 8 hours', featured:true, img:'ev-4', alt:'A wedding ceremony under a draped marquee', desc:'The full day, stunning and beautifully maintained. Add the Airbnb for the night.'},
+    {name:'Other Smaller Events', dur:'2 hr – 8 hr', price:'$800', usd:'$120', label:'Per 2 hours', img:'ev-5', alt:'Guests mingling at a buffet reception', desc:'Engagements, photoshoots, reunions, and intimate gatherings.'},
+    {name:'Other Larger Events', dur:'2 hr – 8 hr', price:'$800', usd:'$120', label:'Per 2 hours', img:'ev-6', alt:'Volunteers serving food at a community event', desc:'Bigger crowds welcome. Tell us the numbers and we’ll plan the space.'}
   ];
   const SPOTS = [
     {name:'Asa Wright Nature Centre', kind:'Nature', img:'x-asa', alt:'The wooden welcome sign at Asa Wright Nature Centre', desc:'A top spot for bird-watching, rainforest hikes, and tranquil nature inside the Northern Range mountains: forest trails, an ocean of greenery, and nature sounds.'},
@@ -25,7 +25,7 @@
   function packCard(p){
     const href = '/events?pack=' + encodeURIComponent(p.name) + '#reserve';
     return `<article class="pack reveal${p.featured?' featured':''}">
-      <figure>${pic(p.img, p.alt)}<span class="price"><small>${p.from?'From':'Fixed'}</small>${p.price} <span style="font-size:.8rem;font-weight:600">USD</span></span></figure>
+      <figure>${pic(p.img, p.alt)}<span class="price"><small>${p.label}</small>${p.price} <span class="cur">TTD</span><span class="usd">${p.usd} USD</span></span></figure>
       <div class="body">
         <span class="dur">${clock}${p.dur}</span>
         <h3>${p.name}</h3>

@@ -158,6 +158,9 @@ header.site .wrap{width:min(1360px,calc(100% - 40px))}
 .pack img{width:100%;height:100%;object-fit:cover}
 .pack .price{position:absolute;right:14px;bottom:14px;background:var(--surface);color:var(--ink);border-radius:12px;padding:8px 12px;font-family:var(--display);font-weight:800;font-size:1.15rem;box-shadow:var(--shadow);font-variant-numeric:tabular-nums}
 .pack .price small{font-family:var(--body);font-weight:600;font-size:.72rem;color:var(--muted);display:block;letter-spacing:.08em;text-transform:uppercase}
+.pack .price .cur{font-size:.8rem;font-weight:600}
+.pack .price .usd{display:block;font-family:var(--body);font-weight:600;font-size:.8rem;color:var(--muted);margin-top:2px}
+.pack.featured .price .usd{color:#5A4410}
 .pack .body{padding:22px;display:grid;gap:10px;flex:1}
 .pack .dur{font-size:.85rem;color:var(--muted);display:flex;align-items:center;gap:8px}
 .pack .dur svg{width:16px;height:16px}
