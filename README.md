@@ -42,7 +42,7 @@ To use a custom domain, open the project's **Settings → Domains**, add the dom
 
 ## Before going live
 
-- **Caution fee amount.** The old terms page said $1,500 TTD in one clause and $2,000 TTD in another. Pick one and the terms section should be corrected to match.
+- **Caution fee.** Confirmed as $1,500 TTD, and used everywhere on the page.
 - **Contact form.** The form opens the visitor's own email or WhatsApp app with the message filled in. If you want submissions saved somewhere instead, connect a form service such as Formspree or Netlify Forms.
 
 ## Event pricing shown on the page
