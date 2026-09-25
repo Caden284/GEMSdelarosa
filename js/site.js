@@ -63,8 +63,8 @@
     if(via === 'whatsapp') window.open('https://wa.me/' + WA + '?text=' + encodeURIComponent(body), '_blank', 'noopener');
     else location.href = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
   }
-  let via = 'whatsapp';
-  document.querySelectorAll('button[data-via]').forEach(b => b.addEventListener('click', () => { via = b.dataset.via; }));
+  // WhatsApp is the default; pressing Enter in a field also sends by WhatsApp.
+  const viaOf = e => (e.submitter && e.submitter.dataset.via) || 'whatsapp';
 
   // ---------- Airbnb ----------
   // If this is ever emptied, the button asks for the stay over WhatsApp instead.
@@ -98,7 +98,7 @@
       if(!reserveForm.reportValidity()) return;
       const v = id => $(id).value.trim();
       const body = `Hi G.E.M.S De La Rosa! I'd like to reserve an event space.\n\nEvent: ${v('evType')}\nPreferred date: ${v('evDate')}\nHours needed: ${hours.value} hr\nEstimated guests: ${v('evGuests') || 'not sure yet'}\nName: ${v('evName')}\nPhone: ${v('evPhone') || '—'}\n\nNotes: ${v('evNotes') || '—'}\n\nI understand the $1,500 TTD refundable caution fee applies.`;
-      openVia(via, `Event booking request: ${v('evType')} on ${v('evDate')}`, body);
+      openVia(viaOf(e), `Event booking request: ${v('evType')} on ${v('evDate')}`, body);
     });
   }
 
@@ -111,7 +111,7 @@
       const v = id => $(id).value.trim();
       const name = (v('cFirst') + ' ' + v('cLast')).trim();
       const body = `Hi G.E.M.S De La Rosa,\n\n${v('cMsg')}\n\n— ${name}\n${v('cEmail')}`;
-      openVia(via, `Message from ${name}`, body);
+      openVia(viaOf(e), `Message from ${name}`, body);
     });
   }
 
